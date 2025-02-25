@@ -1,18 +1,23 @@
-import ServiceCard from "./components/ServiceCard"
+import ServiceCard from "./components/ServiceCard";
 
 const App = () => {
-  const service = [
-    {title:"Web Development", description:"Build modern websites"},
-    {title:"Graphic Design", description:"Awesome Designs"}
+  const services = [
+    { title: "Web Development", description: "Build modern websites" },
+    { title: "Graphic Design", description: "Awesome Designs" },
   ];
-  return(
+
+  return (
     <div>
-      <h1>Our Service</h1>
-      {service.map((service, index)=> (
-      <ServiceCard key={index} title={service.title} description={service.description} />
-      
-    ))}
+      <h1>Our Services</h1>
+      {services.map((service, index) => (
+        <ServiceCard
+          key={index}
+          title={service.title}
+          description={service.description}
+        />
+      ))}
     </div>
-  )
-}
+  );
+};
+
 export default App;

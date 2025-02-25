@@ -1,15 +1,17 @@
-import PropTypes from "Prop-types"
-const ServiceCard = (props) => {
-    return (
-        <div>
-            <h2>{props.title}</h2>
-            <p>{props.description}</p>
-        </div>
-    )
-}
+import PropTypes from "prop-types";
+
+const ServiceCard = ({ title, description }) => {
+  return (
+    <div>
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </div>
+  );
+};
 
 ServiceCard.propTypes = {
-    title: PropTypes.string.isrequired,
-    description: PropTypes.string.isRequired,
-}
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
+
 export default ServiceCard;
